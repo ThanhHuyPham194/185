@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { DownOutlined, SmileOutlined } from "@ant-design/icons";
 import { Dropdown, Menu, Space } from "antd";
-import logo from '../../../../assets/img/logo.png';
+import logo from "../../../../assets/img/logo.png";
 export default function Header() {
   const menu = (
     <Menu
@@ -57,37 +57,41 @@ export default function Header() {
 
   return (
     <div className="header-template">
-        <Link to="/admin">
-      <div className="header-left">
+      <Link to="/admin">
+        <div className="header-left">
           <img src={logo} alt="logo" />
           <h1>
             TRUNG TÂM BẢO TỒN VÀ PHÁT HUY GIÁ TRỊ LỊCH SỬ VĂN HOÁ THÀNH PHỐ HỒ
             CHÍ MINH{" "}
           </h1>
-      </div>
-        </Link>
+        </div>
+      </Link>
+
       <div className="header-right">
         <Link to="/admin/messenger">
           <i class="fab fa-facebook-messenger"></i>
         </Link>
+
         <Link to="/admin/nofi">
           <i class="fa fa-bell"></i>
         </Link>
+
         <Link to="/admin/account">
-          <div className="acount-left">
-            <img src="" alt="" />
+          <div className="acount">
+            <div className="acount-left">
+              <img src="https://picsum.photos/id/1/200/300" alt="user" />
+            </div>
+            <div className="acount-right">
+              <Dropdown overlay={menu}>
+                <a onClick={(e) => e.preventDefault()}>
+                  <Space>
+                      <p className="user-name">Nguyễn Công Anh</p>
+                      <p className="user-title">Admin</p>
+                  </Space>
+                </a>
+              </Dropdown>
+            </div>
           </div>
-          <Dropdown overlay={menu}>
-            <a onClick={(e) => e.preventDefault()}>
-              <Space>
-                <div className="acount-right">
-                  <span>Nguyễn Công Anh</span>
-                  <span>Admin</span>
-                </div>
-                <DownOutlined />
-              </Space>
-            </a>
-          </Dropdown>
         </Link>
       </div>
     </div>

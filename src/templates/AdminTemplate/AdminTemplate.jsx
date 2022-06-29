@@ -15,6 +15,10 @@ export default function AdminTemplate() {
     <div className='container admin-tainer'>
             <Navbar/>
             <Header/>
+            <div className='outlet'>
+            <Outlet/>
+
+            </div>
 
     </div>
     </>
