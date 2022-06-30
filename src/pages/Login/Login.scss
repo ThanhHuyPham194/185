@@ -1,40 +1,45 @@
-.login {
-  height: 100vh !important;
-  width: 100vh !important;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  .img-login {
-    width: 50%;
-    img {
-      width: 100%;
+
+@media screen and (min-width:1440px) {
+  .login {
+    height: 100vh !important;
+    width: 100% !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    .img-login {
+      width: 50%;
+      img {
+        width: 100%;
+      }
     }
-  }
-  .form-login {
-    width: 50%;
-    padding: 0 100px;
-    h1{
-        font-weight: 500;
-    }
-    label {
-      font-size: 14px;
-      color: #333;
-    }
-    input::placeholder {
-      color: #989898;
-      font-size: 14px;
-    }
-    .check-label {
-      margin-bottom: 30px;
-    }
-    .submit-login {
-      width: 100%;
-      background-color: $primary-color;
-      box-shadow: 0px 2px 6px rgba(28, 73, 143, 0.08);
-      border-radius: 6px;
-      &:hover{
-        background-color: $secondary-color;
+    .form-login {
+      width: 50%;
+      padding: 0 100px;
+      h1{
+          font-weight: 500;
+      }
+      label {
+        font-size: 14px;
+        color: #333;
+      }
+      input::placeholder {
+        color: #989898;
+        font-size: 14px;
+      }
+      .check-label {
+        margin-bottom: 30px;
+      }
+      .submit-login {
+        width: 100%;
+        background-color: $primary-color;
+        box-shadow: 0px 2px 6px rgba(28, 73, 143, 0.08);
+        border-radius: 6px;
+        &:hover{
+          background-color: $secondary-color;
+        }
       }
     }
   }
 }
+

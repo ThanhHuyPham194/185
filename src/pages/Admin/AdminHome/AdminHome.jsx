@@ -1,7 +1,16 @@
 import React from "react";
-import { Link, Outlet } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { Link, Outlet, useNavigate } from "react-router-dom";
+import { store } from "../../../redux/configStore";
+
+
 
 export default function AdminHome() {
+  const {user} = useSelector(state=>state.QuanLyNguoiDungReducer);
+  
+  
+  console.log(user);
+let navigate=useNavigate();
   return (
     <div className="container-adminhome">
       <div className="search-admin">
@@ -15,8 +24,9 @@ export default function AdminHome() {
           </button>
         </div>
         <div className="btn-get-user">
-          <button className="btn btn-danger btn-post">Tải Danh Sách Lên</button>
-          <button className="btn btn-success btn-get">Tạo Người Dùng</button>
+          <button className="btn btn-success btn-get" onClick={()=>{
+            navigate("/admin/register");
+          }}>Tạo Người Dùng</button>
         </div>
         </div>
       </div>
@@ -37,13 +47,16 @@ export default function AdminHome() {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td scope="row">01</td>
-            <td>Trần Văn Quý</td>
-            <td>abc@example.com</td>
-            <td>0988012335</td>
-            <td>Super Admin</td>
-            <td>20/07/2020</td>
+          {user&&user.map((item,index)=>{
+            return (
+          <tr key={index}>
+            <td scope="row">{item.id}</td>
+            <td>{item.hoten}</td>
+            <td>{item.email}</td>
+            <td>{item.sodienthoai}</td>
+            <td>{item.vaitro}</td>
+            <td>{item.ngaytao}</td>
+            
             <td className="active">
               <i class="fa fa-circle"></i>
               Đang Hoạt Động
@@ -57,168 +70,9 @@ export default function AdminHome() {
               </button>
             </td>
           </tr>
+            );
+          })}
 
-          <tr>
-            <td scope="row"  className="disable">01</td>
-            <td  className="disable">Trần Văn Quý</td>
-            <td  className="disable">abc@example.com</td>
-            <td  className="disable">0988012335</td>
-            <td  className="disable">Super Admin</td>
-            <td  className="disable">20/07/2020</td>
-            <td className="disable">
-              <i class="fa fa-circle"></i>
-              Không Hoạt Động
-            </td>
-            <td>
-              <button className="btn btn-pen">
-                <i class="fa fa-pen"></i>
-              </button>
-              <button className="btn btn-alt">
-                <i class="fa fa-trash-alt"></i>{" "}
-              </button>
-            </td>
-          </tr>
-
-          <tr>
-            <td scope="row">01</td>
-            <td>Trần Văn Quý</td>
-            <td>abc@example.com</td>
-            <td>0988012335</td>
-            <td>Super Admin</td>
-            <td>20/07/2020</td>
-            <td className="active">
-              <i class="fa fa-circle"></i>
-              Đang Hoạt Động
-            </td>
-            <td>
-              <button className="btn btn-pen">
-                <i class="fa fa-pen"></i>
-              </button>
-              <button className="btn btn-alt">
-                <i class="fa fa-trash-alt"></i>{" "}
-              </button>
-            </td>
-          </tr>
-          <tr>
-            <td scope="row">01</td>
-            <td>Trần Văn Quý</td>
-            <td>abc@example.com</td>
-            <td>0988012335</td>
-            <td>Super Admin</td>
-            <td>20/07/2020</td>
-            <td className="active">
-              <i class="fa fa-circle"></i>
-              Đang Hoạt Động
-            </td>
-            <td>
-              <button className="btn btn-pen">
-                <i class="fa fa-pen"></i>
-              </button>
-              <button className="btn btn-alt">
-                <i class="fa fa-trash-alt"></i>{" "}
-              </button>
-            </td>
-          </tr>
-          <tr>
-            <td scope="row">01</td>
-            <td>Trần Văn Quý</td>
-            <td>abc@example.com</td>
-            <td>0988012335</td>
-            <td>Super Admin</td>
-            <td>20/07/2020</td>
-            <td className="active">
-              <i class="fa fa-circle"></i>
-              Đang Hoạt Động
-            </td>
-            <td>
-              <button className="btn btn-pen">
-                <i class="fa fa-pen"></i>
-              </button>
-              <button className="btn btn-alt">
-                <i class="fa fa-trash-alt"></i>{" "}
-              </button>
-            </td>
-          </tr>
-          <tr>
-            <td scope="row">01</td>
-            <td>Trần Văn Quý</td>
-            <td>abc@example.com</td>
-            <td>0988012335</td>
-            <td>Super Admin</td>
-            <td>20/07/2020</td>
-            <td className="active">
-              <i class="fa fa-circle"></i>
-              Đang Hoạt Động
-            </td>
-            <td>
-              <button className="btn btn-pen">
-                <i class="fa fa-pen"></i>
-              </button>
-              <button className="btn btn-alt">
-                <i class="fa fa-trash-alt"></i>{" "}
-              </button>
-            </td>
-          </tr>
-          <tr>
-            <td scope="row">01</td>
-            <td>Trần Văn Quý</td>
-            <td>abc@example.com</td>
-            <td>0988012335</td>
-            <td>Super Admin</td>
-            <td>20/07/2020</td>
-            <td className="active">
-              <i class="fa fa-circle"></i>
-              Đang Hoạt Động
-            </td>
-            <td>
-              <button className="btn btn-pen">
-                <i class="fa fa-pen"></i>
-              </button>
-              <button className="btn btn-alt">
-                <i class="fa fa-trash-alt"></i>{" "}
-              </button>
-            </td>
-          </tr>
-          <tr>
-            <td scope="row">01</td>
-            <td>Trần Văn Quý</td>
-            <td>abc@example.com</td>
-            <td>0988012335</td>
-            <td>Super Admin</td>
-            <td>20/07/2020</td>
-            <td className="active">
-              <i class="fa fa-circle"></i>
-              Đang Hoạt Động
-            </td>
-            <td>
-              <button className="btn btn-pen">
-                <i class="fa fa-pen"></i>
-              </button>
-              <button className="btn btn-alt">
-                <i class="fa fa-trash-alt"></i>{" "}
-              </button>
-            </td>
-          </tr>
-          <tr>
-            <td scope="row">01</td>
-            <td>Trần Văn Quý</td>
-            <td>abc@example.com</td>
-            <td>0988012335</td>
-            <td>Super Admin</td>
-            <td>20/07/2020</td>
-            <td className="active">
-              <i class="fa fa-circle"></i>
-              Đang Hoạt Động
-            </td>
-            <td>
-              <button className="btn btn-pen">
-                <i class="fa fa-pen"></i>
-              </button>
-              <button className="btn btn-alt">
-                <i class="fa fa-trash-alt"></i>{" "}
-              </button>
-            </td>
-          </tr>
 
 
         </tbody>

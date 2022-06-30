@@ -1,20 +1,30 @@
 import './App.scss';
 import React from 'react';
-import {Routes, Route, BrowserRouter} from 'react-router-dom';
+import {createBrowserHistory} from "history";
+import {Routes, Route, BrowserRouter, useNavigate} from 'react-router-dom';
 import AdminTemplate from './templates/AdminTemplate/AdminTemplate';
 import Login from './pages/Login/Login';
 import AdminHome from './pages/Admin/AdminHome/AdminHome';
 import Register from './pages/Admin/Register/Register';
+import UserHome from './pages/User/UserHome/UserHome';
+import InfoUser from './pages/Admin/InfoUser/InfoUser';
+
+
+export const history=createBrowserHistory();
 function App() {
+
+
   return (
-    <BrowserRouter>
-          <Routes>
+    <BrowserRouter history={history}>
+          <Routes >
             <Route path='admin' element={<AdminTemplate/>}>
                 <Route path='adminhome' element={<AdminHome/>}></Route>
                 <Route path='register' element={<Register/>}></Route>
-
             </Route>
 
+            <Route path='user' element={<AdminTemplate/>}>
+                <Route path='userhome' element={<UserHome/>}></Route>
+            </Route>
 
 
 
