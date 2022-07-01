@@ -20,6 +20,14 @@
             color:#333;
         }
         
+        .form-group{
+           .ant-select-selector{
+            background-color: red;
+            padding-left:12px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+           }
+        }
 
         .form-input{
             position: relative;
@@ -46,10 +54,14 @@
         .submit-top{
             display: flex;
             justify-content: space-between;
+            .label-file{
+                width: 100%;
+                height: 100%;
+            }
             .submit-top-info{
                 display: flex;
                 flex-wrap: wrap;
-                width: calc(100%/3*2);
+                width: 65%;
                 height: 100%;
                 justify-content: space-between;
                 margin-right: 5px;
@@ -60,9 +72,17 @@
             .submit-top-avt{
                 display:flex;
                 flex-direction: column;
-              
-                width: 340px;
+                
+                width: 20%;
                 height: 340px;
+                margin-right: 70px;
+                .hinhDaiDien{
+                    margin-bottom: 8px;
+                }
+                input{
+                    width: 100%;
+                    height: 100%;
+                }
                 .img-input{
                     display: flex;
                     flex-direction: column;
@@ -72,6 +92,7 @@
                     border-radius: 6px;
                     width: 100%;
                     height: 100%;
+                    padding: 45px 120px;
                     i{
                         font-size: 40px;
                         color:#1A48E9;

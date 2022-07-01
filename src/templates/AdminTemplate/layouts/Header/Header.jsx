@@ -69,11 +69,11 @@ export default function Header() {
 
       <div className="header-right">
         <Link to="/admin/messenger">
-          <i class="fab fa-facebook-messenger"></i>
+          <i className="fab fa-facebook-messenger"></i>
         </Link>
 
         <Link to="/admin/nofi">
-          <i class="fa fa-bell"></i>
+          <i className="fa fa-bell"></i>
         </Link>
 
         <Link to="/admin/account">

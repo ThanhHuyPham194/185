@@ -1,4 +1,7 @@
 import React from "react";
+import AutoData from "../../../components/AutoComplete/AutoData";
+
+
 
 export default function Register() {
   return (
@@ -48,10 +51,7 @@ export default function Register() {
 
             <div className="form-group">
               <label htmlFor="exampleInputCity">Tỉnh/Thành phố</label>
-              <div className="form-input">
-              <input type="email" className="form-control" id="exampleInputCity" placeholder="Chọn tỉnh thành phố"/>
-              <i class="fa fa-angle-down"></i>
-              </div>
+              {/* <AutoData className="auto-complete"/> */}
             </div>
 
             <div className="form-group">
@@ -73,12 +73,16 @@ export default function Register() {
             
 
             <div className="submit-top-avt">
-            <label htmlFor="exampleInputAvatar">Hình đại diện</label>
-            <div className="img-input">
+            <label for="file" className="label-file">
+              <span className="hinhDaiDien">Hình đại diện</span>
+            <input type="file" name="file" id="file" class="inputfile" style={{display:"none"}}/>
+            <div for="file" className="img-input">
             <i class="fa fa-camera"></i>
             <span>Chọn ảnh để tải lên</span>
             </div>
+            </label>
             </div>
+            
           </div>
           
           <div className="submit-center">

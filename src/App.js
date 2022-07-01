@@ -7,15 +7,14 @@ import Login from './pages/Login/Login';
 import AdminHome from './pages/Admin/AdminHome/AdminHome';
 import Register from './pages/Admin/Register/Register';
 import UserHome from './pages/User/UserHome/UserHome';
-import InfoUser from './pages/Admin/InfoUser/InfoUser';
 
 
-export const history=createBrowserHistory();
+
 function App() {
 
 
   return (
-    <BrowserRouter history={history}>
+    <BrowserRouter>
           <Routes >
             <Route path='admin' element={<AdminTemplate/>}>
                 <Route path='adminhome' element={<AdminHome/>}></Route>
