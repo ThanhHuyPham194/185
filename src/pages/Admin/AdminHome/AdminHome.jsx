@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
-import { XoaNguoiDungAction } from "../../../redux/actions/QuanLyNguoiDungAction";
+import { SuaNguoiDungAction, XoaNguoiDungAction } from "../../../redux/actions/QuanLyNguoiDungAction";
 import ReactPaginate from "react-paginate";
 
 export default function AdminHome() {
@@ -15,7 +15,7 @@ export default function AdminHome() {
   const [pageCount, setPageCount] = useState(0);
 
   const [itemOffset, setItemOffset] = useState(0);
-  const itemsPerPage = 11;
+  const itemsPerPage = 10;
 
   useEffect(() => {
     const endOffset = itemOffset + itemsPerPage;
@@ -52,6 +52,11 @@ export default function AdminHome() {
         });
       }
     });
+  }
+  const handleEdit =(user)=>{
+    navigate("/admin/edit");
+    dispatch(SuaNguoiDungAction(user));
+
   }
   return (
     <div className="container-adminhome">
@@ -132,12 +137,12 @@ export default function AdminHome() {
                       Đang Hoạt Động
                     </td>
                     <td>
-                      <button className="btn btn-pen">
+                      <button className="btn btn-pen" onClick={()=>handleEdit(user.id)}>
                         <i class="fa fa-pen"></i>
                       </button>
                       <button
                         className="btn btn-alt"
-                        onClick={() => handleClickDelete(user.id)}
+                        onClick={() => handleClickDelete(user)}
                       >
                         <i class="fa fa-trash-alt"></i>{" "}
                       </button>
@@ -162,10 +167,11 @@ export default function AdminHome() {
         containerClassName={"pagination"}
         pageClassName={"page-item"}
         pageLinkClassName={"page-link page-number"}
-        previousClassName={"page-item"}
+        previousClassName={"page-item previous-item"}
         previousLinkClassName={"page-link"}
-        nextClassName={"page-item"}
+        nextClassName={"page-item next-item"}
         nextLinkClassName={"page-link"}
+
       />
     </div>
   );

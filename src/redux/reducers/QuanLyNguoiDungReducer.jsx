@@ -1,4 +1,5 @@
 import { XOA_NGUOI_DUNG } from "../types/QuanLyNguoiDungType";
+import { SUA_NGUOI_DUNG } from "../types/QuanLyNguoiDungType";
 
 const userData=[
     {"id":"01","hoTen":"Tran Van Quy","email":"example@gmail.com","soDienThoai":"0333333333","vaiTro":"Super Admin","ngayTao":"20/7/2020","trangThai":true},
@@ -92,7 +93,7 @@ const stateDefault = {
 
 }
 
-
+const editUser ={};
 
 
 export const QuanLyNguoiDungReducer=(state=stateDefault,action)=>{
@@ -102,8 +103,13 @@ export const QuanLyNguoiDungReducer=(state=stateDefault,action)=>{
                 ...stateDefault,
                 users: state.users.filter((user)=>user.id!==action.payload),
             };
+            case SUA_NGUOI_DUNG:
+                return {
+                    ...stateDefault,
+                    users: state.users.filter((user)=>user.id == action.payload.id),
+                };
         default:
             return state;
-            break;
     }
 }
+ 

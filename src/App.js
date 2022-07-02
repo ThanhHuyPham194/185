@@ -7,6 +7,8 @@ import Login from './pages/Login/Login';
 import AdminHome from './pages/Admin/AdminHome/AdminHome';
 import Register from './pages/Admin/Register/Register';
 import UserHome from './pages/User/UserHome/UserHome';
+import Edit from './pages/Admin/Edit/Edit';
+import Information from './pages/Admin/Information/Information';
 
 
 
@@ -19,6 +21,8 @@ function App() {
             <Route path='admin' element={<AdminTemplate/>}>
                 <Route path='adminhome' element={<AdminHome/>}></Route>
                 <Route path='register' element={<Register/>}></Route>
+                <Route path='edit' element={<Edit/>}></Route>
+                <Route path='information' element={<Information/>}></Route>
             </Route>
 
             <Route path='user' element={<AdminTemplate/>}>

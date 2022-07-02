@@ -1,5 +1,7 @@
 import React from 'react'
 import { AutoComplete } from 'antd';
+import 'antd/dist/antd.css';
+import { useController } from 'react-hook-form';
 const options = [
   {
     value: 'Burns Bay Road',
@@ -12,15 +14,24 @@ const options = [
   },
 ];
 
-export default function AutoData() {
+export default function AutoData({control,...props}) {
+
+  const {field}=useController({control, name:props.name});
+  
   return (
+    <>
+    <div className='autodata'>
     <AutoComplete
-   
-    options={options}
-    placeholder="try to type `b`"
     filterOption={(inputValue, option) =>
       option.value.toUpperCase().indexOf(inputValue.toUpperCase()) !== -1
+
     }
+    
+    {...field}
+    {...props}
   />
+  <i class="fa fa-angle-down"></i>
+  </div>
+  </>
   )
 }

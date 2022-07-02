@@ -60,15 +60,17 @@
     background-color: #fff;
     text-align: center;
     padding-bottom: 20px;
-    height: 80%;
+    height: 83%;
 
     .table-user {
       margin-bottom: 0;
       // border-radius: 5px;
       background-color: #fff;
+
       .tr-1 {
         background-color: #1a48e9;
         text-align: center;
+        color: white;
       }
       .tr-0 {
         border-top-left-radius: 10px;
@@ -102,7 +104,6 @@
         align-items: center;
       }
     }
-   
   }
 }
 td {
@@ -157,24 +158,39 @@ td {
 }
 
 .pagination {
-    display: flex;
-    justify-content: right;
-    background-color: white;
-    padding-bottom: 20px;
-    .page-link {
-      border: none;
-      color: #8d9297;
-      &:hover {
-        background-color: white;
-        border: solid 1px #dbe0e5;
-        border-radius: 4px;
-      }
-      &:focus {
-        border: solid 1px #dbe0e5;
-        border-radius: 4px;
-        box-shadow: none;
-        color:black;
-      }
-     
+  display: flex;
+  justify-content: right;
+  gap:10px;
+  background-color: white;
+  padding-bottom: 20px;
+  padding-right: 10px;
+  .page-link {
+    border: none;
+    color: #8d9297;
+    &:hover {
+      background-color: white;
+      border: solid 1px #dbe0e5;
+      border-radius: 4px;
+    }
+    &:focus {
+      box-shadow: none;
+      color:black;
     }
   }
+  .next-item,
+  .previous-item{
+    a{
+      color:black;
+    }
+  }
+}
+
+.selected  {
+  .page-link{
+    background-color: white;
+    border: solid 1px #dbe0e5;
+    color:black;
+    border-radius: 4px;
+  }
+}
+
