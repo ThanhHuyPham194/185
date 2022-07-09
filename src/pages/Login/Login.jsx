@@ -8,8 +8,8 @@ import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
 const schema = yup.object().shape({
-  userName: yup.string().required('Username is required'),
-  passWord: yup.string().required('Password is required'),
+  userName: yup.string().required('* Mã số là bắt buộc'),
+  passWord: yup.string().required('* Mật khẩu là bắt buộc'),
 })
 
 export default function Login() {
@@ -60,6 +60,7 @@ export default function Login() {
           <label
             className="form-check-label check-label"
             htmlFor="exampleCheck1"
+            id="checkBox"
           >
             Nhớ Thông Tin
           </label>

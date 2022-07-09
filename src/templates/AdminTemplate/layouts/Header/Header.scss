@@ -21,6 +21,7 @@
         i{
             margin-right: 30px;
             font-size: 24px;
+            color: #1A48E9;
         }
         .acount{
             display: flex;
@@ -34,6 +35,9 @@
                 }
             }
             .acount-right{
+                .user-name{
+                    color: #1A48E9;
+                }
                 .user-title{
                     color: #888888;
                 }

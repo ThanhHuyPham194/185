@@ -1,7 +1,4 @@
-import Password from "antd/lib/input/Password";
-import Swal from "sweetalert2";
-import { XOA_NGUOI_DUNG } from "../types/QuanLyNguoiDungType";
-import { SUA_NGUOI_DUNG } from "../types/QuanLyNguoiDungType";
+import { CAP_NHAT_NGUOI_DUNG, LAY_NGUOI_DUNG, THEM_NGUOI_DUNG, XOA_NGUOI_DUNG } from "../types/QuanLyNguoiDungType";
 
 export const DangNhapAction = (thongTinDangNhap, navigate) => {
     const Swal = require("sweetalert2");
@@ -30,7 +27,17 @@ export const XoaNguoiDungAction=(userID)=>({
     payload: userID,
 })
 
-export const SuaNguoiDungAction=(user)=>({
-  type:SUA_NGUOI_DUNG,
+export const LayNguoiDungAction=(user)=>({
+  type:LAY_NGUOI_DUNG,
   payload: user,
+})
+
+export const ThemNguoiDungAction=(user)=>({
+  type: THEM_NGUOI_DUNG,
+  payload:user,
+})
+
+export const CapNhatNguoiDungAction=(user)=>({
+  type: CAP_NHAT_NGUOI_DUNG,
+  payload:user,
 })

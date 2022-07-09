@@ -1,18 +1,8 @@
 import React from 'react'
 import { AutoComplete } from 'antd';
-import 'antd/dist/antd.css';
+import 'antd/dist/antd.min.css';
 import { useController } from 'react-hook-form';
-const options = [
-  {
-    value: 'Burns Bay Road',
-  },
-  {
-    value: 'Downing Street',
-  },
-  {
-    value: 'Wall Street',
-  },
-];
+
 
 export default function AutoData({control,...props}) {
 
@@ -30,7 +20,7 @@ export default function AutoData({control,...props}) {
     {...field}
     {...props}
   />
-  <i class="fa fa-angle-down"></i>
+  <i className="fa fa-angle-down"></i>
   </div>
   </>
   )
