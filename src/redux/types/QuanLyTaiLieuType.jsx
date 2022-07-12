@@ -1,0 +1,1 @@
+export const XOA_DI_TICH="XOA_DI_TICH";
