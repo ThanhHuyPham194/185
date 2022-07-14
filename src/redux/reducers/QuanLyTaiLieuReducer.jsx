@@ -70,55 +70,7 @@ const documentsData = [
     type: "Cấp thành phố",
     image:"https://vnn-imgs-a1.vgcloud.vn/img2.infonet.vn/w800/Uploaded/2020/yrfjpynfzyr/2019_06_12/11_1.jpg",
   },
-  {
-    id:"10",
-    name: "Di tích kiến trúc Cấp quốc gia đặc biệt",
-    address: "Ấp 2 thuộc xã Tân Kiên – Bình Chánh",
-    type: "Cấp quốc gia đặc biệt",
-    image:"https://tienamphu.com/wp-content/uploads/2018/07/chua-tu-quang.binhchanh.jpg",
-  },
-  {
-    id:"11",
-    name: "Di tích lịch sử Cấp quốc gia đặc biệt",
-    address: "Ấp 2 thuộc xã Tân Kiên – Bình Chánh",
-    type: "Cấp quốc gia đặc biệt",
-    image:"https://www.kienthucviet.vn/wp-content/uploads/2019/07/thuyet-minh-ve-dia-dao-cu-chi-1.jpg",
-  },
-  {
-    id:"12",
-    name: "Di tích kiến trúc Cấp quốc gia đặc biệt",
-    address: "Ấp 2 thuộc xã Tân Kiên – Bình Chánh",
-    type: "Cấp quốc gia đặc biệt",
-    image:"https://tienamphu.com/wp-content/uploads/2018/07/chua-tu-quang.binhchanh.jpg",
-  },
-  {
-    id:"13",
-    name: "Di tích lịch sử Cấp quốc gia đặc biệt",
-    address: "Ấp 2 thuộc xã Tân Kiên – Bình Chánh",
-    type: "Cấp quốc gia đặc biệt",
-    image:"https://www.kienthucviet.vn/wp-content/uploads/2019/07/thuyet-minh-ve-dia-dao-cu-chi-1.jpg",
-  },
-  {
-    id:"14",
-    name: "Di tích lịch sử Cấp quốc gia đặc biệt",
-    address: "Ấp 2 thuộc xã Tân Kiên – Bình Chánh",
-    type: "Cấp quốc gia đặc biệt",
-    image:"https://www.kienthucviet.vn/wp-content/uploads/2019/07/thuyet-minh-ve-dia-dao-cu-chi-1.jpg",
-  },
-  {
-    id:"15",
-    name: "Di tích kiến trúc Cấp quốc gia đặc biệt",
-    address: "Ấp 2 thuộc xã Tân Kiên – Bình Chánh",
-    type: "Cấp quốc gia đặc biệt",
-    image:"https://tienamphu.com/wp-content/uploads/2018/07/chua-tu-quang.binhchanh.jpg",
-  },
-  {
-    id:"16",
-    name: "Di tích lịch sử Cấp quốc gia đặc biệt",
-    address: "Ấp 2 thuộc xã Tân Kiên – Bình Chánh",
-    type: "Cấp quốc gia đặc biệt",
-    image:"https://www.kienthucviet.vn/wp-content/uploads/2019/07/thuyet-minh-ve-dia-dao-cu-chi-1.jpg",
-  },
+  
 ];
 
 const stateDefault = {

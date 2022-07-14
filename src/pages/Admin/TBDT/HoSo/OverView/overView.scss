@@ -1,0 +1,25 @@
+.over-view {
+  padding: 24px 0;
+
+  &__view {
+    display: flex;
+
+    .view-group {
+      margin-right: 48px;
+    }
+  }
+  &__info {
+  }
+  .line {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 40px 0;
+    width: 468px;
+    height: 1px;
+    background-color: #888888;
+  }
+  &__slider {
+    display: flex;
+  }
+}

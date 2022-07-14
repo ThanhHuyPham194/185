@@ -3,14 +3,26 @@
 
 @import '../src/scss/Reset/reset';
 
-@import '../src/pages/Login/Login.scss';
+@import '../src/pages/Admin/Account/Begin/Login/Login.scss';
+
 @import '../src/templates/AdminTemplate/AdminTemplate.scss';
 @import '../src/templates/AdminTemplate/layouts/Navbar/Navbar.scss';
 @import '../src/templates/AdminTemplate/layouts/Header/Header.scss';
-@import '../src/pages/Admin/AdminHome/AdminHome.scss';
-@import '../src/pages/Admin/Register/Register.scss';
-@import '../src/pages/Admin/Edit/Edit.scss';
-@import '../src/pages/Admin/Information//Information.scss';
+
+@import '../src/pages/Admin/Account/Begin/AdminHome/AdminHome.scss';
+
+@import '../src/pages/Admin/Account/Begin/Register/Register.scss';
+@import '../src/pages/Admin/Account/Begin/Edit/Edit.scss';
+@import '../src/pages/Admin/Account/Begin/Information/Information.scss';
 @import '../src/components/AutoComplete/AutoData.scss';
-@import '../src/pages/Admin/Document/Document.scss';
-@import '../src/pages/Admin/Calendar/Calendar.scss';
+@import '../src/pages/Admin/TBDT/HoSo/Document/Document.scss';
+@import '../src/pages/Admin/Account/Calendar/Calendar.scss';
+@import '../src/pages/Admin/Director/Director.scss';
+@import '../src/pages/Admin/TBDT/VanThu/DocumentBOD/DocumentBOD.scss';
+@import '../src/pages/Admin/TBDT/VanThu/DocumentType/DocumentType.scss';
+@import '../src/pages/Admin/TBDT/VanThu/DocumentDetail/DocumentDetail.scss';
+
+@import '../src/pages/Admin/TBDT/HoSo/OverView/overView.scss';
+@import '../src/pages/Admin/HCTH/ThuChi/Payroll/payroll.scss';
+@import '../src/pages/Admin/Mission/add-mission.scss';
+@import '../src/templates/AdminTemplate/layouts/Header/CardNotification.scss';

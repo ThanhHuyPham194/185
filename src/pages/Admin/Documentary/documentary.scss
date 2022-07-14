@@ -1,0 +1,97 @@
+.documentary {
+  padding: 24px 0;
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    .left {
+      h3 {
+        font-weight: 600;
+        font-size: 16px;
+      }
+    }
+    .right {
+      .upload-group {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        p {
+          margin-bottom: unset;
+          margin-left: 5px;
+          font-weight: 500;
+          font-size: 16px;
+          color: #1a48e9;
+        }
+      }
+    }
+  }
+  &__main {
+    .fordate {
+    }
+    &--wrapper {
+      display: grid;
+      grid-template-columns: 325px 1fr;
+      column-gap: 60px;
+      .left {
+        .date-group {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          border: 1px solid #d0d0d0;
+          border-radius: 5px;
+          padding: 10px 12px;
+          margin-top: 8px;
+          margin-bottom: 26px;
+          cursor: pointer;
+          &__left {
+            display: flex;
+            align-items: center;
+            p:nth-child(2) {
+              margin: 0 5px;
+            }
+          }
+        }
+        .documentary-content {
+          .date {
+            margin-bottom: 12px;
+          }
+          &--main {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            margin-bottom: 5px;
+            padding: 5px 12px;
+          }
+        }
+      }
+      .right {
+        .img {
+          img {
+            object-fit: cover;
+          }
+        }
+        .paginate {
+          max-width: 470px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-top: 20px;
+          .page {
+            margin: 0 12px;
+          }
+          .arrow {
+            cursor: pointer;
+            overflow: hidden;
+            border-radius: 50%;
+            border: 1px solid black;
+            padding: 8.5px;
+            &-next {
+              transform: rotate(180deg);
+            }
+          }
+        }
+      }
+    }
+  }
+}

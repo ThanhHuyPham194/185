@@ -1,19 +1,66 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
     text-decoration: none;
-}
-body{
+  }
+  body {
     padding: 0;
     overflow: auto;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     min-width: 1440px;
     margin: 0 auto;
-}
-button{
-    &:hover,&:focus{
-        outline: none !important;
+  }
+  button {
+    &:hover,
+    &:focus {
+      outline: none !important;
     }
-}
+  }
+  
+  .container {
+    width: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin: 0 auto;
+  }
+  
+  .--relics {
+  padding: 24px !important;
+
+    h2 {
+      text-align: center;
+      font-size: 24px;
+      font-weight: 600;
+      margin: 34px 0 24px 0;
+    }
+    .container {
+      max-width: 100%;
+      border-radius: 8px;
+      height: fit-content;
+      background-color: white;
+      box-shadow: -1px -1px 17px -5px rgba(0, 0, 0, 0.75);
+      -webkit-box-shadow: -1px -1px 17px -5px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: -1px -1px 17px -5px rgba(0, 0, 0, 0.75);
+      padding-top: 10px;
+      padding-bottom: 24px;
+    }
+    .--view {
+      margin-top: 25px;
+      margin-bottom: 40px;
+    }
+  }
+  .modal-fade-out {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(black, 0.3);
+    z-index: 999;
+  }
+  p {
+    margin-bottom: unset;
+  }
+  

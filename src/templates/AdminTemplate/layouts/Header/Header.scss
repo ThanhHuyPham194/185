@@ -45,3 +45,20 @@
         }
     }
 }
+.ant-dropdown-menu-title-content{
+    .ant-menu-title{
+        display: flex;
+        gap:10px;
+        align-items: center;
+        svg{
+            width: 20px;
+            height: 20px;
+            color: $primary-color;
+        }
+        a{
+            color: $primary-color;
+            font-weight: 400;
+            font-size: 14px;
+        }
+    }
+}

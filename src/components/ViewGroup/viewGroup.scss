@@ -1,0 +1,11 @@
+@import "../../App.scss";
+.view-group {
+  display: flex;
+  cursor: pointer;
+  p {
+    margin-left: 15px;
+    color: #1a48e9;
+    font-weight: 400;
+    font-size: 16px;
+  }
+}

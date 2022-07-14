@@ -1,10 +1,11 @@
 import React from "react";
 import nav1 from "../../../../assets/img/navbar/1.png";
-import nav2 from "../../../../assets/img/navbar/2.png";
+import nav2 from "../../../../assets/img/navbar/Vector.png";
 import nav3 from "../../../../assets/img/navbar/3.png";
 import nav4 from "../../../../assets/img/navbar/4.png";
 import nav5 from "../../../../assets/img/navbar/5.png";
 import nav6 from "../../../../assets/img/navbar/6.png";
+import { Link, NavLink } from "react-router-dom";
 
 export default function Navbar() {
   return (
@@ -13,19 +14,11 @@ export default function Navbar() {
         {/* Main Menu */}
         <div className="side-menu-container">
           <ul className="nav navbar-nav">
-            {/* Dropdown*/}
-            <li className="panel panel-default" id="dropdown">
-              <a data-toggle="collapse" href="#dropdown-lvl1">
-                <img src={nav1} alt="1" />
-                Quản Lý Người Dùng
-                <span className="caret" />
-              </a>
-            </li>
 
             {/* Dropdown*/}
             <li className="panel panel-default" id="dropdown">
               <a data-toggle="collapse" href="#dropdown-lvl2">
-                <img src={nav2} alt="2" /> Quản Lý Nhân Sự
+                <img src={nav1} alt="1" /> Quản Lý Tài Khoản
                 <span className="caret" />
               </a>
               {/* Dropdown level 1 */}
@@ -33,21 +26,30 @@ export default function Navbar() {
                 <div className="panel-body">
                   <ul className="nav navbar-nav">
                     <li>
-                      <a href="#">Nhiệm vụ</a>
+                      <Link to="/admin/managetask">Nhiệm vụ</Link>
                     </li>
                     <li>
-                      <a href="#">Lịch</a>
+                      
+                      <Link to="/admin/calendar">Lịch</Link>  
                     </li>
                   </ul>
                 </div>
               </div>
+            </li>
+            {/* Dropdown*/}
+            <li className="panel panel-default" id="dropdown">
+              <Link to="/admin/director" data-toggle="collapse" href="#dropdown-lvl1">
+                <img src={nav2} alt="1" />
+                Ban Giám Đốc 
+                <span className="caret" />
+              </Link>
             </li>
 
             {/* Dropdown*/}
             <li className="panel panel-default" id="dropdown">
               <a data-toggle="collapse" href="#dropdown-lvl3">
                 <img src={nav3} alt="3" />
-                Quản Lý Văn Thư
+                P.Hành Chính - Tổng Hợp
                 <span className="caret" />
               </a>
               {/* Dropdown level 1 */}
@@ -55,13 +57,13 @@ export default function Navbar() {
                 <div className="panel-body">
                   <ul className="nav navbar-nav">
                     <li>
-                      <a href="#">Công văn mặt</a>
+                      <Link to="/admin/vanthu">Văn Thư </Link>
                     </li>
                     <li>
-                      <a href="#">Công văn tham mưu</a>
+                      <Link to="/admin/danhmuc">Hồ Sơ</Link>
                     </li>
                     <li>
-                      <a href="#">Công văn chỉ đạo</a>
+                      <Link to="/admin/payroll">Kế Toán</Link>
                     </li>
                   </ul>
                 </div>
@@ -70,17 +72,9 @@ export default function Navbar() {
 
             {/* Dropdown*/}
             <li className="panel panel-default" id="dropdown">
-              <a data-toggle="collapse" href="#dropdown-lvl4">
-                <img src={nav4} alt="4" /> Quản Lý Di Tích 
-                <span className="caret" />
-              </a>
-            </li>
-
-            {/* Dropdown*/}
-            <li className="panel panel-default" id="dropdown">
               <a data-toggle="collapse" href="#dropdown-lvl5">
                 <img src={nav5} alt="5" />
-                Quản Lý Tài Liệu
+                P. Tu Bổ - Di Tích
                 <span className="caret" />
               </a>
               {/* Dropdown level 1 */}
@@ -88,32 +82,49 @@ export default function Navbar() {
                 <div className="panel-body">
                   <ul className="nav navbar-nav">
                     <li>
-                      <a href="#">Quản lý dự án</a>
+                      <Link to="/admin/vanthu">Văn Thư </Link>
                     </li>
                     <li>
-                      <a href="#">
-                        Tư vấn thiết kế lập báo <br />
-                        cáo kinh tế kỹ thuật
-                      </a>
+                      <Link to="/admin/document">
+                        Hồ Sơ
+                      </Link>
                     </li>
-                    <li>
-                      <a href="#">Tư vấn giám sát thi công</a>
-                    </li>
-                    <li>
-                      <a href="#">Tư vấn thẩm tra thiết kế và dự toán</a>
-                    </li>
+
+
+
+                    
                   </ul>
                 </div>
               </div>
             </li>
 
+
+
+
+
             {/* Dropdown*/}
             <li className="panel panel-default" id="dropdown">
               <a data-toggle="collapse" href="#dropdown-lvl6">
-                <img src={nav6} alt="6" /> Quản Lý Lương
+                <img src={nav5} alt="5" />
+                P. Lập Hồ Sơ Di Tích
                 <span className="caret" />
               </a>
-            </li>
+              {/* Dropdown level 1 */}
+              <div id="dropdown-lvl6" className="panel-collapse collapse">
+                <div className="panel-body">
+                  <ul className="nav navbar-nav">
+                    <li>
+                      <Link to="/admin/vanthu">Văn Thư </Link>
+                    </li>
+                    <li>
+                      <a href="#">
+                        Hồ Sơ
+                      </a>
+                    </li>
+</ul>
+</div>
+</div>
+</li>
           </ul>
         </div>
       </nav>

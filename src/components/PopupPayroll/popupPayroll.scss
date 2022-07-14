@@ -1,0 +1,135 @@
+.popupdetails-salary {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    box-shadow: 1px 1px 11px 4px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 1px 1px 11px 4px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 1px 1px 11px 4px rgba(0, 0, 0, 0.75);
+    padding: 45px 0;
+    max-width: 755px;
+    height: 95vh;
+    z-index: 999;
+    //   chung
+    h3 {
+      font-weight: 600;
+      font-size: 16px;
+      text-align: center;
+      margin-bottom: 32px;
+    }
+    .compare {
+      color: #807d9b;
+    }
+    //
+    &__wrapper {
+      display: grid;
+      grid-template-columns: 385px 1fr;
+      grid-template-rows: auto;
+      column-gap: 24px;
+      .title {
+        font-size: 16px;
+        font-weight: 500;
+        margin-bottom: 16px;
+      }
+      .box {
+        border: 1px solid #e7e8f2;
+        padding: 24px 10px 24px 30px;
+        border-radius: 10px;
+        min-height: 185px;
+      }
+      .left {
+        .box {
+          .salary {
+            font-size: 16px;
+            font-weight: 400;
+            letter-spacing: 1px;
+          }
+          .money {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            p {
+              margin-bottom: unset;
+            }
+            .number {
+              font-size: 28px;
+              font-weight: 600;
+              color: #219653;
+              margin: 20px 0;
+            }
+            .percent {
+              display: flex;
+              align-items: center;
+              p {
+                margin-right: 10px;
+                color: #c8c8c8;
+              }
+            }
+          }
+        }
+      }
+      .right {
+        .box {
+          &__wrapper {
+            display: flex;
+            justify-content: space-between;
+  
+            .name {
+              font-size: 16px;
+              font-weight: 400;
+              letter-spacing: 1px;
+            }
+          }
+          .number-account {
+            font-size: 16px;
+            font-weight: 600;
+            color: #ea2222;
+            margin: 10px 0 35px 0;
+          }
+        }
+      }
+    }
+    &__history {
+      .title {
+        font-size: 16px;
+        font-weight: 500;
+        margin: 24px 0 16px 0;
+      }
+      thead {
+        tr {
+          th {
+            background: #f7fef0;
+            font-weight: 500;
+            &::before {
+              display: none;
+            }
+            text-align: center;
+            //   &:nth-child(1) {
+            //     padding-left: 15px !important;
+            //   }
+          }
+        }
+      }
+      tbody {
+        tr {
+          td {
+            &:nth-child(1) {
+              color: #1a48e9;
+            }
+            &:nth-child(2) {
+              font-weight: 600;
+            }
+            &:nth-child(4) {
+              color: #219653;
+            }
+          }
+          &:nth-child(2),
+          &:nth-child(4) {
+            background-color: rgba(155, 246, 64, 0.08);
+          }
+        }
+      }
+    }
+  }
+  
