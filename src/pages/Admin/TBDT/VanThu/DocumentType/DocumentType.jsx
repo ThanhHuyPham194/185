@@ -51,17 +51,7 @@ export default function DocumentType() {
               <h5>23 mục</h5>
             </div>
           </div>
-          <div
-            className="documentbod-item"
-            onClick={()=>handleClick("CÔNG VĂN MẬT")}
-            
-          >
-            <i className="fa fa-file-text"></i>
-            <div className="documentbod-item-info">
-              <span>Công văn mật</span>
-              <h5>23 mục</h5>
-            </div>
-          </div>
+        
           <div className="documentbod-item-upload">
             <svg
               xmlns="http://www.w3.org/2000/svg"

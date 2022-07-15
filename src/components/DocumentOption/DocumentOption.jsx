@@ -37,7 +37,7 @@ export default function DocumentOption({ titleCheckBox }) {
             className="form-check-input"
             type="checkbox"
             id="gridCheckNationSpecial"
-            checked={titleCheckBox==="Cấp quốc gia đặc biệt"?"true":""}
+            defaultChecked={titleCheckBox==="Cấp quốc gia đặc biệt"?"true":""}
           />
           <label className="form-check-label" htmlFor="gridCheckNationSpecial">
             Cấp quốc gia đặc biệt
@@ -48,7 +48,7 @@ export default function DocumentOption({ titleCheckBox }) {
             className="form-check-input"
             type="checkbox"
             id="gridCheckNation"
-            checked={titleCheckBox==="Cấp quốc gia"?"true":""}
+            defaultChecked={titleCheckBox==="Cấp quốc gia"?"true":""}
 
           />
           <label className="form-check-label" htmlFor="gridCheckNation">
@@ -60,7 +60,7 @@ export default function DocumentOption({ titleCheckBox }) {
             className="form-check-input"
             type="checkbox"
             id="gridCheckCity"
-            checked={titleCheckBox==="Cấp thành phố"?"true":""}
+            defaultChecked={titleCheckBox==="Cấp thành phố"?"true":""}
 
           />
           <label className="form-check-label" htmlFor="gridCheckCity">

@@ -117,9 +117,9 @@ export default function Navbar() {
                       <Link to="/admin/vanthu">Văn Thư </Link>
                     </li>
                     <li>
-                      <a href="#">
+                      <Link to="/admin/hsdt-document">
                         Hồ Sơ
-                      </a>
+                      </Link>
                     </li>
 </ul>
 </div>

@@ -7,10 +7,19 @@ import vector_svg from '../../../../../assets/img/Vector.svg';
 import shape_svg from '../../../../../assets/img/Shape.svg';
 import eye_svg from '../../../../../assets/img/eye.svg';
 
-
+import Modal from '../../../../../components/Modal/Modal';
 import './payroll.scss';
+import { useDispatch, useSelector } from 'react-redux';
+import PopupPayroll from '../../../../../components/PopupPayroll/PopupPayroll';
 const { TabPane } = Tabs;
 export default function Payroll() {
+    const {isPopup} = useSelector(store => store.popup);
+    const dispatch = useDispatch()
+    const handlePopup = () => {
+        dispatch({
+            type: 'OPENED_POPUP'
+        })
+    }
     const columns = [
         {
             title: 'Stt',
@@ -82,7 +91,7 @@ export default function Payroll() {
             subsidize: '1.700.000 VND',
             workingDays: '24',
             totalIncome: '14.100.000 VND',
-            details: <img src={eye_svg}></img>,
+            details: <img src={eye_svg} onClick={handlePopup} ></img>,
         },
         {
             key: '2',
@@ -94,7 +103,7 @@ export default function Payroll() {
             subsidize: '1.500.000 VND',
             workingDays: '24',
             totalIncome: '11.200.000 VND',
-            details: <img src={eye_svg}></img>,
+            details: <img src={eye_svg} onClick={handlePopup}></img>,
         },
         {
             key: '3',
@@ -106,7 +115,7 @@ export default function Payroll() {
             subsidize: '1.500.000 VND',
             workingDays: '24',
             totalIncome: '11.200.000 VND',
-            details: <img src={eye_svg}></img>,
+            details: <img src={eye_svg} onClick={handlePopup}></img>,
         },
         {
             key: '4',
@@ -118,7 +127,7 @@ export default function Payroll() {
             subsidize: '800.000 VND',
             workingDays: '24',
             totalIncome: '8.000.000 VND',
-            details: <img src={eye_svg}></img>,
+            details: <img src={eye_svg} onClick={handlePopup}></img>,
         },
         {
             key: '5',
@@ -130,7 +139,7 @@ export default function Payroll() {
             subsidize: '800.000 VND',
             workingDays: '24',
             totalIncome: '8.000.000 VND',
-            details: <img src={eye_svg}></img>,
+            details: <img src={eye_svg} onClick={handlePopup}></img>,
         },
         {
             key: '6',
@@ -142,7 +151,7 @@ export default function Payroll() {
             subsidize: '800.000 VND',
             workingDays: '24',
             totalIncome: '8.000.000 VND',
-            details: <img src={eye_svg}></img>,
+            details: <img src={eye_svg} onClick={handlePopup}></img>,
         },
         {
             key: '7',
@@ -154,7 +163,7 @@ export default function Payroll() {
             subsidize: '800.000 VND',
             workingDays: '24',
             totalIncome: '8.000.000 VND',
-            details: <img src={eye_svg}></img>,
+            details: <img src={eye_svg} onClick={handlePopup}></img>,
         },
     ];
     const [visible, setVisible] = useState(false);
@@ -189,6 +198,11 @@ export default function Payroll() {
     );
     return (
         <div className='payroll'>
+            {isPopup && 
+            <Modal>
+                <PopupPayroll/>
+                </Modal>
+                }
             <div className="container">
                 <h2>Bảng thanh toán lương</h2>
                 <div className="payroll__filter">

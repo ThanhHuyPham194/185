@@ -5,8 +5,6 @@ const data = [
   { role: "GIÁM ĐỐC", name: "LÊ THIẾU KỲ" },
   { role: "PHÓ GIÁM ĐỐC", name: "NGUYỄN VĂN A" },
   { role: "PHÓ GIÁM ĐỐC", name: "NGUYỄN VĂN B" },
-  { role: "PHÓ GIÁM ĐỐC", name: "NGUYỄN VĂN C" },
-  { role: "PHÓ GIÁM ĐỐC", name: "NGUYỄN VĂN D" },
  
 ];
 export default function Director() {

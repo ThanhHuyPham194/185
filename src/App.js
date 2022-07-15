@@ -25,6 +25,7 @@ import AddMission from './pages/Admin/Mission/AddMission';
 import ListMission from './pages/Admin/Mission/ListMission';
 import Documentary from './pages/Admin/Documentary/Documentary';
 import ManageTask from './pages/Admin/ManageTask/ManageTask';
+import DocumentHSDT from './pages/Admin/TBDT/VanThu/DocumentHSDT/DocumentHSDT';
 
 
 function App() {
@@ -55,6 +56,8 @@ function App() {
                 <Route path='listmission' element={<ListMission/>}></Route>
                 <Route path='documentary' element={<Documentary/>}></Route>
                 <Route path='managetask' element={<ManageTask/>}></Route>
+                <Route path='hsdt-document' element={<DocumentHSDT/>}></Route>
+
 
 
 
